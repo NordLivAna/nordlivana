@@ -1,12 +1,22 @@
 import './App.css'
+import breakfast from './assets/breakfast.png'
 
 function App() {
   return (
     <main className="min-h-screen bg-[#f7f3ec] text-[#1f2a24]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <a href="#" className="text-2xl font-semibold tracking-wide">
-          NordLivAna
-        </a>
+        <div className="flex items-center gap-10">
+          <a href="#" className="text-2xl font-semibold tracking-wide">
+            NordLivAna
+          </a>
+
+          <div className="hidden gap-8 text-sm md:flex">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#pillars">Pillars</a>
+            <a href="#follow">Contact</a>
+          </div>
+        </div>
 
         <a
           href="https://instagram.com/nordlivana/"
@@ -18,7 +28,7 @@ function App() {
         </a>
       </nav>
 
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2">
+      <section id="about" className="mx-auto grid min-h-[650px] max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-24">
         <div>
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#6f7f72]">
             Nordic inspired healthy lifestyle
@@ -62,22 +72,16 @@ function App() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] bg-[#dfe7dc] p-8 shadow-sm">
-          <div className="flex aspect-square items-center justify-center rounded-[1.5rem] bg-[#f9faf6]">
-            <div className="text-center">
-              <div className="mx-auto mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-[#1f2a24] text-4xl font-bold text-white">
-                NL
-              </div>
-              <p className="text-xl font-medium">NordLivAna</p>
-              <p className="mt-2 text-[#6f7f72]">
-                Healthy • Balanced • Nordic
-              </p>
-            </div>
-          </div>
+        <div className="overflow-hidden rounded-[2rem] shadow-lg">
+          <img
+            src={breakfast}
+            alt="Healthy breakfast with avocado, eggs, coffee, and green juice"
+            className="h-auto w-full object-cover object-center transition duration-500 hover:scale-105"
+          />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section id="pillars" className="mx-auto max-w-6xl px-6 py-16">
         <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#6f7f72]">
           Our pillars
         </p>
@@ -103,7 +107,7 @@ function App() {
 
       <section
         id="follow"
-        className="mx-auto max-w-6xl px-6 py-20 text-center"
+        className="mx-auto max-w-6xl px-6 py-14 text-center"
       >
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#6f7f72]">
           Coming soon
@@ -146,8 +150,8 @@ function App() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="border-t border-[#d9ddd6] pt-16">
+      <section className="mx-auto max-w-6xl px-6 py-14">
+        <div className="border-t border-[#d9ddd6] pt-12">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#6f7f72]">
             What you'll find
           </p>
